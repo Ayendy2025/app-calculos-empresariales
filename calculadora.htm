@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Financiamiento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell app-shell">
+    <header class="topbar">
+      <a class="back-link" href="index.htm">← Menú</a>
+      <span>Financiamiento</span>
+    </header>
+
+    <section class="panel calculator-panel">
+      <p class="eyebrow">Cálculo comercial</p>
+      <h1>Calculadora de financiamiento</h1>
+      <p class="subtle">Calcula el monto financiado, interés mensual, cuota y total pagado.</p>
+
+      <div class="form-grid">
+        <label>
+          <span>Precio total</span>
+          <input type="text" id="precio" inputmode="decimal" placeholder="Ej: 45000">
+        </label>
+
+        <label>
+          <span>Inicial</span>
+          <input type="text" id="inicial" inputmode="decimal" placeholder="Ej: 10000">
+        </label>
+
+        <label>
+          <span>Adicional (15 días)</span>
+          <input type="text" id="adicional" inputmode="decimal" placeholder="Ej: 5000">
+        </label>
+
+        <label>
+          <span>Plazo (meses)</span>
+          <input type="text" id="plazo" inputmode="numeric" placeholder="Ej: 12">
+        </label>
+
+        <label>
+          <span>Interés % mensual</span>
+          <input type="text" id="interes" inputmode="decimal" placeholder="Ej: 5">
+        </label>
+      </div>
+
+      <button class="btn green full" type="button" onclick="calcular()">Calcular financiamiento</button>
+
+      <div class="result-box" id="resultado" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

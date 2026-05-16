@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traductor ANTROPLEXOC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell app-shell">
+    <header class="topbar">
+      <a class="back-link" href="index.htm">← Menú</a>
+      <span>ANTROPLEXOC</span>
+    </header>
+
+    <section class="panel translator-panel">
+      <p class="eyebrow">Cifrado numérico</p>
+      <h1>Traductor ANTROPLEXOC</h1>
+      <p class="subtle">Convierte números a letras usando el patrón 1=A, 2=N, 3=T, 4=R, 5=O, 6=P, 7=L, 8=E, 9=X, 0=C.</p>
+
+      <label class="field-label" for="input">Número o código</label>
+      <input type="text" id="input" placeholder="Escribe numero o codigo" autocomplete="off">
+
+      <div class="button-row">
+        <button class="btn green" type="button" onclick="codificar()">Codificar</button>
+        <button class="btn blue" type="button" onclick="decodificar()">Decodificar</button>
+      </div>
+
+      <button class="btn red full" type="button" onclick="limpiar()">Limpiar</button>
+      <button class="btn dark full" type="button" onclick="copiar()">Copiar resultado</button>
+
+      <div class="result-box result-large" id="resultado" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
